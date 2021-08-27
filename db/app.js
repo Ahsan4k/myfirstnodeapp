@@ -4,7 +4,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 const url = "mongodb+srv://ahsan123:ksingh1@cluster0.ihdsy.mongodb.net/myFirstDatabase"
 
- await MongoClient.connect(url, async(err,db) => {
+ MongoClient.connect(url, (err,db) => {
     if(err,db) console.log(err);
     console.log("Database created!");
     db.close();
